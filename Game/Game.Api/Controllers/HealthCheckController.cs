@@ -1,3 +1,4 @@
+using Game.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Game.Api.Controllers;
@@ -9,6 +10,7 @@ public class HealthCheckController : Controller
     [HttpGet]
     public OkObjectResult Get()
     {
-        return Ok("1");
+        var versionNumber = new VersionNumber();
+        return Ok(versionNumber);
     }
 }
