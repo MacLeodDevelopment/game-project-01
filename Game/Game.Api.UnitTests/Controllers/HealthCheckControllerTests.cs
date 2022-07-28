@@ -1,5 +1,8 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using FluentAssertions;
 using Game.Api.Controllers;
+using Game.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 #pragma warning disable CS8618
@@ -24,6 +27,7 @@ public class HealthCheckControllerTests
 
         result.Should().BeOfType<OkObjectResult>();
         result.StatusCode.Should().Be(200);
-        result.Value.Should().Be("1");
+
+        result.Value.Should().BeEquivalentTo(new VersionNumber());
     }
 }
