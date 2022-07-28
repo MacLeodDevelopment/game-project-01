@@ -42,7 +42,7 @@ This should be a Blazor Component (i.e. not a razor page) on the home page which
 * Get rid of the boilerplate components that got generated when the app was created, e.g. the counter component. 
 * Add a pretty-ish style. Have a look for something suitably nerdy and dungeon-like. 
 
-API - Things to think about:
+## API - Things to think about:
 
 * What operations might we need? Create or start new game? What else? 
 	
